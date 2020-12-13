@@ -89,7 +89,7 @@ services:
     ports:
       - 6875:80
     restart: unless-stopped
-    depends_on:
+    links:
       - bookstack_db
   bookstack_db:
     image: linuxserver/mariadb
